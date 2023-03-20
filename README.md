@@ -53,11 +53,11 @@ This was also my first use of SASS and most of the elements mentioned above.
 
 ```html
 <ul>
-  <li class="border" id="bred">
-    <div class="ListItem" id="Reaction">
-      <img class="imgSVG" src="./assets/images/icon-reaction.svg"></a>
-      <p class="title">Reaction</p>
-      <p class="catScore">80 <span>/ 100</span></p>
+  <li class="border border--red">
+    <div class="list-item">
+      <img src="./assets/images/icon-reaction.svg"></a>
+      <p class="category--title">Reaction</p>
+      <p class="category--score">80 <span>/ 100</span></p>
     </div>
   </li>
 </ul>
