@@ -92,15 +92,36 @@ This was also my first use of SASS and most of the elements mentioned above.
         left: -5px
         z-index: -1
 
-    &#byellow
+    
+    &.border--yellow
         border-color: hsla(39, 100%, 56%, 20%)
 
-    &#bred 
+        .list-item
+            background-color: hsla(39, 100%, 56%, 10%)
+            color: hsl(39, 100%, 56%)
+
+
+    &.border--red 
         border-color: hsla(0, 100%, 67%, 20%)
 
-    &#bgreen
-        border-color: hsla(166, 100%, 37%, 20%)
+        .list-item
+            background-color: hsla(0, 100%, 67%, 10%)
+            color: hsl(0, 100%, 67%)
+    
+    &.border--blue
+        border-color: hsla(234, 85%, 45%, 20%)
 
+        .list-item
+            background-color: hsla(234, 85%, 45%, 10%)
+            color: hsl(234,85%, 45%)
+
+
+    &.border--green
+        border-color: hsla(166, 100%, 37%, 20%)
+        
+        .list-item
+            background-color: hsla(166, 100%, 37%, 10%)
+            color: hsl(166, 100%, 37%)
 ```
 
 ### Useful resources
