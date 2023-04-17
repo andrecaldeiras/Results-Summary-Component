@@ -1,186 +1,120 @@
-.attribution 
-    font-size: 11px
-    text-align: center
+@import "./_vars.sass"
 
-    a 
-        color: hsl(228, 45%, 44%)
-    
+@font-face 
+    font-family: "HankenGrotesk"
+    src: url("../assets/fonts/HankenGrotesk-VariableFont_wght.ttf") format("truetype")
 
-
-
-
-body 
-    font-family: Hanken Grotesk
-    font-weight: 500
-    font-size: 18px
-
-p 
+*
     margin: 0
-
+    padding: 0
+    
+body 
+    font-family: HankenGrotesk
+    font-size: $font-size
 
 .container 
     position: absolute
     top:50%
     left:50%
+    transform: translate(-50%,-50%)
     box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2)
     display: flex
-    justify-content: center
     text-align: center
-    border: 2px
-    border-radius: 25px
-    box-shadow: 0 
-    transform: translate(-50%,-50%)
-    // overflow: hidden
-    // transition: box-shadow 500ms ease-in-out
-    // transition: left 500ms ease-in-out
-    // &:hover
-    //     box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2)
-    //     left: 50%
-    //     .summary
-    //         left: 0px
+    border-radius: 30px
 
+    &__result 
+        color: $n--light-lavender
+        background: linear-gradient($grad--light-slate-blue,$grad--light-royal-blue)
+        padding: 30px 50px
+        width: 250px
+        border-radius: 30px
+        display: flex
+        flex-flow: column
+        align-items: center
 
-/**/
+        .result__title
+            margin-bottom: 30px
+            font-weight: $weight--light
+            font-size: 1.5rem
 
-/* CODE FOR "YOUR RESULT" SECTION */
+        .result__wrapper
+            width: 175px
+            height: 175px
+            background: linear-gradient($grad--violet-blue,$grad--persian-blue)
+            border-radius: 100vw
+            display: flex
+            flex-flow: column
+            justify-content: center
+            margin-bottom: 25px
 
-/**/
+            &-score
+                font-size: 4rem
+                font-weight: $weight--heavy
+                color: $n--white
 
-.result 
-    width: 300px
-    height: auto
-    color: hsl(241, 100%, 89%)
-    background-image: linear-gradient(hsl(252, 100%, 67%),hsl(241, 81%, 54%))
-    display: flex
-    align-items: center
-    justify-content: center
-    flex-direction: column
-    padding: 15px
-    padding-top: 30px
-    border: 2px
-    border-radius: 25px
-    font-size: 22px
-    // z-index: 1
-    // position: relative
-    // top: 0
+        .result__score-title
+            font-size: 2rem
+            font-weight: $weight--light
+            color: white
+            margin-bottom: 20px
 
+        .result__description
+            margin-bottom: 20px
 
-.circle 
-    width: 175px
-    height: 175px
-    background-image: linear-gradient(hsla(256, 72%, 46%, 1),hsla(241, 72%, 46%, 0))
-    border: 2px
-    border-radius: 500px
-    display: flex
-    justify-content: center
-    align-items: center
-    flex-direction: column
-    margin: 25px
+    &__summary
+        margin: 30px
+        text-align: left
+        width: 250px
+        display: flex
+        flex-flow: column
+        justify-content: space-between
 
+        .summary__title
+            font-size: 1.5rem
+            font-weight: $weight--light
 
-    .score-number
-        margin: 0
-        font-size: 65px
-        font-weight: 700
-        color: white
+        .summary__list
+            font-size: 1rem
+            
+            &-item
+                display: flex
+                justify-content: space-between
+                flex-flow: row nowrap
+                background: $light-red
+                opacity: 70%
+                color: $light-red
+                list-style: none
+                border-radius: 10px
+                min-width: 150px
+                width: 100%
+                padding: 15px
+                font-weight: $weight--heavy
 
+                .list-item__category-name
+                    display: flex
+                    align-items: center
 
-.circle p 
-    font-size: 14px
-    margin: 0
-    color: hsl(241, 100%, 89%)
+                
+                .list-item__category-score
+                    display: flex
+                    align-items: center
+            
+                .category__image
+                    margin-right: .5rem
 
+                .category__score
+                    color: black
+                    margin-right: .5rem
 
-.description-title
-    font-size: 28px
-    margin: 2%
-    color: white
+                .category__title
 
-
-.description
-    font-size: 16px
-    font-weight: 350
-    margin: 36px
-    margin-top: 10px
-
-
-/**/
-
-/* CODE FOR "SUMMARY" SECTION */
-
-/**/
-
-.summary
-    text-align: left
-    padding: 30px
-    margin-top: 0px
-    // position: relative
-    // z-index: -1
-    // left: -350px
-    // transition: left 500ms ease-in-out
-
-
-.summary-title
-    font-size: 22px
-
-
-ul
-    margin: 0px
-    margin-top: 20px
-    padding: 0px
-
-
-.list-item
-    display: flex
-    background-color: hsla(0, 100%, 67%, 10%)
-    color: hsl(0, 100%, 67%)
-    list-style: none
-    border: 2px
-    border-radius: 10px
-    top: -2px
-    left: -2px
-    text-align: center
-    font-size: 16px
-    width: 100%
-    padding: 15px
-
-
-.list-item *
-    align-items: center
-
-
-.list-item img
-    margin-right: 10px
-
-
-.category--score
-    color: black
-    text-align: center
-    display: flex
-    justify-self: end
-    margin-left: auto
-
-
-.category--title
-    margin-right: 60px
-    text-align: center
-
-
-span
-    color: gray
-    margin-left: 5px
-
-
-/**/
-
-/* CORNER BORDERS FOR THE CATEGORY SCORES */
-
-/**/
+                .category__score-total
+                    color: gray
 
 .border
     position: relative
     display: flex
-    border: 1px solid hsla(234, 85%, 45%, 20%)
+    border: 1px solid $cobalt-blue
     border-radius: 11px
     margin-bottom: 15px
     z-index: -1
@@ -210,7 +144,7 @@ span
     &.border--yellow
         border-color: hsla(39, 100%, 56%, 20%)
 
-        .list-item
+        .summary__list-item
             background-color: hsla(39, 100%, 56%, 10%)
             color: hsl(39, 100%, 56%)
 
@@ -218,14 +152,14 @@ span
     &.border--red 
         border-color: hsla(0, 100%, 67%, 20%)
 
-        .list-item
+        .summary__list-item
             background-color: hsla(0, 100%, 67%, 10%)
             color: hsl(0, 100%, 67%)
     
     &.border--blue
         border-color: hsla(234, 85%, 45%, 20%)
 
-        .list-item
+        .summary__list-item
             background-color: hsla(234, 85%, 45%, 10%)
             color: hsl(234,85%, 45%)
 
@@ -233,48 +167,36 @@ span
     &.border--green
         border-color: hsla(166, 100%, 37%, 20%)
         
-        .list-item
+        .summary__list-item
             background-color: hsla(166, 100%, 37%, 10%)
             color: hsl(166, 100%, 37%)
 
-
-/**/
-
-/* BUTTON */
-
-/**/
-
 .continue-button
     background-color: hsl(224, 30%, 27%)
-    color: white
-    border: 2px
-    border-radius: 200px
-    display: block
-    padding: 15px
-    font-size: 16px
-    margin-top: 35px
-    text-align: center
-    transition: transform 250ms ease-in-out
+    color: $n--white
+    border-radius: 100vw
     text-decoration: none
+    text-align: center
+    padding: 15px
+    font-size: 1rem
     
     &:hover
-        transform: scale(1.1)
 
-
-/**/
-
-/* MEDIA QUERIES */
-
-/**/
-
-@media (max-width: 50rem) 
+@media (max-width: 700px) 
     .container
         flex-direction: column
         width: 100%
+        height: 100%
         top: 0
         transform: translate(-50%, 0)
-    
-    .result
-        width: unset
-        border-top-right-radius: 0
-        border-top-left-radius: 0
+
+        &__result
+            width: unset
+            border-top-right-radius: 0
+            border-top-left-radius: 0
+        
+        &__summary
+            width: unset
+
+            .summary__title
+                margin-bottom: 30px

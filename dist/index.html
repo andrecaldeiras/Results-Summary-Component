@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <!-- displays site properly based on user's device-->
+    <link href="../assets/images/favicon-32x32.png" sizes="32x32" type="image/png" rel="icon">
+    <link href="style.css" rel="stylesheet">
+    <title>Frontend Mentor | Results summary component</title>
+  </head>
+  <body>
+    <main class="container">
+      <div class="container__result">
+        <h2 class="result__title">Your Result</h2>
+        <div class="result__wrapper">
+          <h1 class="result__wrapper-score">76</h1>
+          <p class="result__wrapper-score-of">of 100</p>
+        </div>
+        <p class="result__score-title">Great</p>
+        <p class="result__description">You scored higher than 65% of the people who have taken these tests.</p>
+      </div>
+      <div class="container__summary">
+        <h2 class="summary__title">Summary</h2>
+        <ul class="summary__list">
+          <li class="border border--red">
+            <div class="summary__list-item">
+              <div class="list-item__category-name"><img class="category__image" src="../assets/images/icon-reaction.svg">
+                <p class="category__title">Reaction</p>
+              </div>
+              <div class="list-item__category-score">
+                <p class="category__score">80</p><span class="category__score-total">/ 100</span>
+              </div>
+            </div>
+          </li>
+          <li class="border border--yellow">
+            <div class="summary__list-item">
+              <div class="list-item__category-name"><img class="category__image" src="../assets/images/icon-memory.svg">
+                <p class="category__title">Memory</p>
+              </div>
+              <div class="list-item__category-score">
+                <p class="category__score">92</p><span class="category__score-total">/ 100</span>
+              </div>
+            </div>
+          </li>
+          <li class="border border--green">
+            <div class="summary__list-item">
+              <div class="list-item__category-name"><img class="category__image" src="../assets/images/icon-verbal.svg">
+                <p class="category__title">Verbal</p>
+              </div>
+              <div class="list-item__category-score">
+                <p class="category__score">61</p><span class="category__score-total">/ 100</span>
+              </div>
+            </div>
+          </li>
+          <li class="border border--blue">
+            <div class="summary__list-item">
+              <div class="list-item__category-name"><img class="category__image" src="../assets/images/icon-visual.svg">
+                <p class="category__title">Visual</p>
+              </div>
+              <div class="list-item__category-score">
+                <p class="category__score">72</p><span class="category__score-total">/ 100</span>
+              </div>
+            </div>
+          </li>
+        </ul><a class="continue-button" href="#">Continue</a>
+      </div>
+    </main>
+  </body>
+</html>

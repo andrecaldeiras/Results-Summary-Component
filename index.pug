@@ -1,0 +1,54 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(content="width=device-width, initial-scale=1.0" name="viewport")
+    // displays site properly based on user's device
+    link(href="../assets/images/favicon-32x32.png" sizes="32x32" type="image/png" rel="icon")
+    link(href="style.css" rel="stylesheet")
+    title Frontend Mentor | Results summary component
+  body
+    main.container
+      .container__result
+        h2.result__title Your Result
+        .result__wrapper
+          h1.result__wrapper-score 76
+          p.result__wrapper-score-of of 100
+        p.result__score-title Great
+        p.result__description You scored higher than 65% of the people who have taken these tests.
+      .container__summary
+        h2.summary__title Summary
+        ul.summary__list
+          li.border.border--red
+            .summary__list-item
+              .list-item__category-name
+                img.category__image(src="../assets/images/icon-reaction.svg")
+                p.category__title Reaction
+              .list-item__category-score
+                p.category__score 80
+                span.category__score-total / 100
+          li.border.border--yellow
+            .summary__list-item
+              .list-item__category-name
+                img.category__image(src="../assets/images/icon-memory.svg")
+                p.category__title Memory
+              .list-item__category-score
+                p.category__score 92
+                span.category__score-total / 100
+          li.border.border--green
+            .summary__list-item
+              .list-item__category-name
+                img.category__image(src="../assets/images/icon-verbal.svg")
+                p.category__title Verbal
+              .list-item__category-score
+                p.category__score 61
+                span.category__score-total / 100
+          li.border.border--blue
+            .summary__list-item
+              .list-item__category-name
+                img.category__image(src="../assets/images/icon-visual.svg")
+                p.category__title Visual
+              .list-item__category-score
+                p.category__score 72
+                span.category__score-total / 100
+        a.continue-button(href="#") Continue
